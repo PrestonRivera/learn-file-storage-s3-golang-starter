@@ -46,7 +46,7 @@ func (cfg *apiConfig) handlerUploadThumbnail(w http.ResponseWriter, r *http.Requ
 	}
 
 	// Get the image data from the form
-	file, fileHeader, err := r.FormFile("thumbnail"); 
+	file, fileHeader, err := r.FormFile("thumbnail")
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "Failed to get image data", err)
 		return
